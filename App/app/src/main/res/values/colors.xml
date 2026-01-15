@@ -4,7 +4,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="royal_violet">#7400b8</color>
+    <!--<color name="royal_violet">#7400b8</color>
     <color name="indigo_bloom">#6930c3</color>
     <color name="slate_indigo">#5e60ce</color>
     <color name="blue_energy">#5390d9</color>
@@ -13,6 +13,17 @@
     <color name="strong_cyan">#56cfe1</color>
     <color name="pearl_aqua">#64dfdf</color>
     <color name="turquoise">#72efdd</color>
-    <color name="aquamarine">#80ffdb</color>
+    <color name="aquamarine">#80ffdb</color>-->
+
+    <color name="space_indigo_dark">#312C4A</color>
+    <color name="indigo_shadow">#522B76</color>
+    <color name="indigo_deep">#772AA8</color>
+    <color name="hyper_magenta">#B22AF8</color>
+    <color name="purple_bloom">#9B43F7</color>
+    <color name="medium_slate_blue">#855DF7</color>
+    <color name="soft_slate_blue">#6D76F6</color>
+    <color name="cornflower_energy">#568FF5</color>
+    <color name="cool_sky">#40A8F4</color>
+    <color name="sky_aqua">#29C1F3</color>
 
 </resources>
