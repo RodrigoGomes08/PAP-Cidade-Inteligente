@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TechUrbis</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sing_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="Create_Account">Create account</string>
+    <string name="slogan">TechUrbis - Smart City. Better Life</string>
 </resources>
