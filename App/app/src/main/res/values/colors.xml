@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Básicas -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Paleta Azul → Roxo -->
-    <color name="Azul_profundo">#0A3D62</color>
-    <color name="Azul_marinho">#08244E</color>
-    <color name="Azul_medio">#1E5AA8</color>
-    <color name="Azul_vibrante">#3B6FD8</color>
-    <color name="Azul_claro">#5A7FFF</color>
-    <color name="Azul_arroxeado">#7B6DFF</color>
-    <color name="Violeta_claro">#9A5CFF</color>
-    <color name="Roxo_medio">#7A3DB8</color>
-    <color name="Roxo_profundo">#5B2C83</color>
-
-    <!-- Neutros -->
-    <color name="Azul_acinzentado">#758093</color>
-    <color name="Cinza_claro">#E5E5E6</color>
+    <color name="royal_violet">#7400b8</color>
+    <color name="indigo_bloom">#6930c3</color>
+    <color name="slate_indigo">#5e60ce</color>
+    <color name="blue_energy">#5390d9</color>
+    <color name="fresh_sky">#4ea8de</color>
+    <color name="sky_surge">#48bfe3</color>
+    <color name="strong_cyan">#56cfe1</color>
+    <color name="pearl_aqua">#64dfdf</color>
+    <color name="turquoise">#72efdd</color>
+    <color name="aquamarine">#80ffdb</color>
 
 </resources>
