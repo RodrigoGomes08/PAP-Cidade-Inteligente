@@ -9,4 +9,5 @@ CREATE TABLE estacionamentos (
     latitude DECIMAL(10,7) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (id_cidade) REFERENCES cidades(id)
+    CONSTRAINT unique_long_lat UNIQUE (longitude, latitude)
 );
