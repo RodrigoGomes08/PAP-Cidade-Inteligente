@@ -1,10 +1,11 @@
 USE cidade_system;
 
-DROP TABLE IF EXISTS estacionamentos;
+DROP TABLE IF EXISTS p_estacionamentos;
 
-CREATE TABLE estacionamentos (
+CREATE TABLE p_estacionamentos (
     id INT(11) UNSIGNED AUTO_INCREMENT,
     id_cidade INT(11) UNSIGNED NOT NULL,
+    nome VARCHAR(255) NOT NULL,
     longitude DECIMAL(10,7) NOT NULL,
     latitude DECIMAL(10,7) NOT NULL,
     PRIMARY KEY (id),
