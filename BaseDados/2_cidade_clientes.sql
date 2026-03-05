@@ -7,6 +7,7 @@ CREATE TABLE clientes (
     data_nascimento DATE NOT NULL,
     telefone VARCHAR(20)UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
+    cargo VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
