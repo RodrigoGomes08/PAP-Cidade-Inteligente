@@ -9,7 +9,7 @@ CREATE TABLE contentores (
     longitude DECIMAL (10, 7),
     latitude DECIMAL (10, 7),
     tipo VARCHAR(10) NOT NULL,
-    estado BOOLEAN NOT NULL,
+    estado VARCHAR(30) NOT NULL,
     observacoes VARCHAR(255),
     isFull BOOLEAN NOT NULL,
     PRIMARY KEY (id),
