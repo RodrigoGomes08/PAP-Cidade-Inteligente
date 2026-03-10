@@ -7,7 +7,7 @@ CREATE TABLE lugares (
     id_tipo INT(11) UNSIGNED NOT NULL,
     id_estacionamento INT(11) UNSIGNED NOT NULL,
     numTotal INT NOT NULL,
-    identificacao VARCHAR(255) NOT NULL,
+    identificacao VARCHAR(2) NOT NULL,
     ocupado BOOLEAN NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (id_tipo) REFERENCES lugar_tipos(id),
