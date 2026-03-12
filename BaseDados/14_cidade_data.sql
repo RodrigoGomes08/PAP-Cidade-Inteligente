@@ -1,29 +1,112 @@
-INSERT INTO estados (id, nome, cor) VALUES
-(1,'Ativo','Verde'),
-(2,'Inativo','Vermelho'),
-(3,'Manutenção','Amarelo'),
-(4,'Danificado','Laranja'),
-(5,'Desligado','Cinza'),
-(6,'Operacional','Verde'),
-(7,'Avariado','Vermelho'),
-(8,'Em teste','Azul'),
-(9,'Reservado','Roxo'),
-(10,'Bloqueado','Preto'),
-(11,'Ativo2','Verde'),
-(12,'Inativo2','Vermelho'),
-(13,'Manutenção2','Amarelo'),
-(14,'Danificado2','Laranja'),
-(15,'Desligado2','Cinza'),
-(16,'Operacional2','Verde'),
-(17,'Avariado2','Vermelho'),
-(18,'Teste2','Azul'),
-(19,'Reservado2','Roxo'),
-(20,'Bloqueado2','Preto');
+INSERT INTO clientes (nome, data_nascimento, telefone, email, password, morada, tem_mobilidade_reduzida)
+VALUES 
+('João Silva', '1990-05-12', '912345678', 'joao.silva@email.com', 'pass123', 'Rua das Flores 15, Lisboa', 0),
+('Maria Fernandes', '1985-09-23', '934567890', 'maria.fernandes@email.com', 'maria456', 'Av. da Liberdade 120, Lisboa', 1),
+('Pedro Costa', '2000-01-30', '965432187', 'pedro.costa@email.com', 'pedro789', 'Rua do Sol 8, Porto', 0);
 
-INSERT INTO cidades (id,nome) VALUES
-(1,'Loures');
+INSERT INTO veiculos (id_cliente, tipo, matricula, modelo, marca, cor, is_electric) VALUES
+(1, 'Carro', '12-AB-34', 'Clio', 'Renault', 'Branco', 0),
+(2, 'Carro', '23-CD-45', 'Model 3', 'Tesla', 'Preto', 1),
+(3, 'Moto', '34-EF-56', 'CB500', 'Honda', 'Vermelho', 0),
+(4, 'Carro', '45-GH-67', 'Golf', 'Volkswagen', 'Cinza', 0),
+(5, 'Carro', '56-IJ-78', 'Leaf', 'Nissan', 'Azul', 1),
+(6, 'Carro', '67-KL-89', '208', 'Peugeot', 'Branco', 0),
+(7, 'Moto', '78-MN-90', 'MT-07', 'Yamaha', 'Preto', 0),
+(8, 'Carro', '89-OP-12', 'Corolla', 'Toyota', 'Prata', 0),
+(9, 'Carro', '90-QR-23', 'Mustang Mach-E', 'Ford', 'Vermelho', 1),
+(10, 'Carro', '11-ST-45', 'Serie 3', 'BMW', 'Azul', 0);
 
-INSERT INTO tipo_lugares (id,tipo,cor) VALUES
-(1,'Normal','Branco'),
-(2,'Deficiente','Azul'),
-(3,'Eletrico','Verde');
+INSERT INTO cidades (nome) VALUES
+('Loures');
+
+INSERT INTO p_estacionamentos (id_cidade, nome, num_max_lugares, longitude, latitude) VALUES
+(1, 'Parque Centro', 100, '-9.1393', '38.7223'),
+(2, 'Parque Ribeira', 80, '-8.6110', '41.1496'),
+(3, 'Parque Avenida', 60, '-8.4292', '40.2056');
+
+INSERT INTO p_estacionamentos_clientes (id_p_estacionamento, id_cliente) VALUES
+(1, 1),
+(2, 2),
+(3, 3);
+
+INSERT INTO tipo_lugares (tipo, cor) VALUES
+('Normal', 'Cinza'),
+('Elétrico', 'Verde'),
+('Deficiente', 'Azul'),
+('Motociclo', 'Amarelo');
+
+INSERT INTO lugares (id_p_estacionamento, id_tipo, identificacao, ocupado) VALUES
+(1, 1, 'A1', 0),
+(1, 2, 'A2', 0),
+(1, 3, 'A3', 0),
+(1, 4, 'A4', 0),
+(2, 1, 'B1', 0),
+(2, 2, 'B2', 0),
+(2, 3, 'B3', 0),
+(2, 4, 'B4', 0),
+(3, 1, 'C1', 0),
+(3, 2, 'C2', 0),
+(3, 3, 'C3', 0),
+(3, 4, 'C4', 0);
+
+INSERT INTO cli_his_ocu_lug (id_lugar, id_estacionamento_clientes, hr_entrada, hr_saida) VALUES
+(1, 1, '2024-01-01 08:00:00', '2024-01-01 10:00:00'),
+(2, 2, '2024-01-01 09:00:00', '2024-01-01 11:00:00'),
+(3, 3, '2024-01-01 10:00:00', '2024-01-01 12:00:00');
+
+INSERT INTO candeeiros_urbanos (id_cidade, id_estado, identificacao, longitude, latitude) VALUES
+(1, 1,'Candeeiro 1', 'C1', '-9.1393', '38.7223'),
+(1, 1,'Candeeiro 2', 'C2', '-9.1400', '38.7225'),
+(1, 1,'Candeeiro 3', 'C3', '-9.1410', '38.7227'),
+(1, 1,'Candeeiro 4', 'C4', '-8.6110', '41.1496'),
+(1, 1,'Candeeiro 5', 'C5', '-8.6120', '41.1498'),
+(1, 1,'Candeeiro 6', 'C6', '-8.6130', '41.1500'),
+(1, 1,'Candeeiro 7', 'C7', '-8.4292', '40.2056'),
+(1, 1,'Candeeiro 8', 'C8', '-8.4300', '40.2058'),
+(1, 1,'Candeeiro 9', 'C9', '-8.4310', '40.2060'),
+(1, 2,'Candeeiro 10', 'C10', '-9.1420', '38.7230'),
+(1, 2,'Candeeiro 11', 'C11', '-9.1430', '38.7235'),
+(1, 2,'Candeeiro 12', 'C12', '-9.1440', '38.7240'),
+(1, 2,'Candeeiro 13', 'C13', '-8.6140', '41.1502'),
+(1, 2,'Candeeiro 14', 'C14', '-8.6150', '41.1504'),
+(1, 2,'Candeeiro 15', 'C15', '-8.6160', '41.1506'),
+(1, 2,'Candeeiro 16', 'C16', '-8.4320', '40.2062'),
+(1, 2,'Candeeiro 17', 'C17', '-8.4330', '40.2064'),
+(1, 2,'Candeeiro 18', 'C18', '-8.4340', '40.2066'),
+(1, 3,'Candeeiro 19', 'C19', '-9.1450', '38.7245'),
+(1, 3,'Candeeiro 20', 'C20', '-9.1460', '38.7250'),
+(1, 3,'Candeeiro 21', 'C21', '-9.1470', '38.7255'),
+(1, 3,'Candeeiro 22', 'C22', '-8.6170', '41.1508'),
+(1, 3,'Candeeiro 23', 'C23', '-8.6180', '41.1510'),
+(1, 3,'Candeeiro 24', 'C24', '-8.6190', '41.1512'),
+(1, 3,'Candeeiro 25', 'C25', '-8.4350', '40.2068'),
+(1, 3,'Candeeiro 26', 'C26', '-8.4360', '40.2070'),
+(1, 3,'Candeeiro 27', 'C27', '-8.4370', '40.2072');
+
+INSERT INTO contentores (id_cidade, id_estado, capacidade_max, longitude, latitude, tipo, identificacao, observacoes, is_full) VALUES
+(1, 1, 100.00, '-9.1393', '38.7223', 'Ecoponto Azul', 'Contentor 1', 'Sem observações', 0),
+(1, 1, 80.00, '-8.6110', '41.1496', 'Ecoponto Verde', 'Contentor 2', 'Sem observações', 0),
+(1, 1, 60.00, '-8.4292', '40.2056', 'Ecoponto Amarelo', 'Contentor 3', 'Sem observações', 0),
+(1, 2, 120.00, '-9.1420', '38.7230', 'Ecoponto Azul', 'Contentor 4', 'Sem observações', 0),
+(1, 2, 90.00, '-8.6140', '41.1502', 'Ecoponto Verde', 'Contentor 5', 'Sem observações', 0),
+(1, 2, 70.00, '-8.4320', '40.2062', 'Ecoponto Amarelo', 'Contentor 6', 'Sem observações', 0),
+(1, 3, 110.00, '-9.1450', '38.7245', 'Ecoponto Azul', 'Contentor 7', 'Sem observações', 0),
+(1, 3, 85.00, '-8.6170', '41.1508', 'Ecoponto Verde', 'Contentor 8', 'Sem observações', 0),
+(1, 3, 65.00, '-8.4350', '40.2068', 'Ecoponto Amarelo', 'Contentor 9', 'Sem observações', 0);
+
+INSERT INTO estados (estado) VALUES
+('Operacional'),
+('Avariado'),
+('Em Manutenção');
+
+INSERT INTO contentor_leituras (id_contentor, peso, data_leitura) VALUES
+(1, 50.00, '2024-01-01 08:00:00'),
+(2, 30.00, '2024-01-01 09:00:00'),
+(3, 20.00, '2024-01-01 10:00:00'),
+(4, 60.00, '2024-01-01 11:00:00'),
+(5, 45.00, '2024-01-01 12:00:00'),
+(6, 35.00, '2024-01-01 13:00:00'),
+(7, 55.00, '2024-01-01 14:00:00'),
+(8, 40.00, '2024-01-01 15:00:00'),
+(9, 25.00, '2024-01-01 16:00:00');
+
