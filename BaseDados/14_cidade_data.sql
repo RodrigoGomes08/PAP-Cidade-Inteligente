@@ -28,7 +28,7 @@ INSERT INTO tipo_lugares (tipo, cor) VALUES
 ('Deficiente', 'Azul'),
 ('Motociclo', 'Amarelo');
 
-INSERT INTO lugares (id_p_estacionamento, id_tipo, identificacao, ocupado) VALUES
+INSERT INTO lugares (id_p_estacionamentos, id_tipo_lugares, identificacao, ocupado) VALUES
 (1, 1, 'A1', 0),
 (1, 2, 'A2', 0),
 (1, 3, 'A3', 0),
@@ -47,34 +47,42 @@ INSERT INTO cli_his_ocu_lug (id_lugar, id_estacionamento_clientes, hr_entrada, h
 (2, 2, '2024-01-01 09:00:00', '2024-01-01 11:00:00'),
 (3, 3, '2024-01-01 10:00:00', '2024-01-01 12:00:00');
 
-INSERT INTO candeeiros_urbanos (id_cidade, id_estado, identificacao, longitude, latitude) VALUES
-(1, 1,'Candeeiro 1', 'C1', '-9.1393', '38.7223'),
-(1, 1,'Candeeiro 2', 'C2', '-9.1400', '38.7225'),
-(1, 1,'Candeeiro 3', 'C3', '-9.1410', '38.7227'),
-(1, 1,'Candeeiro 4', 'C4', '-8.6110', '41.1496'),
-(1, 1,'Candeeiro 5', 'C5', '-8.6120', '41.1498'),
-(1, 1,'Candeeiro 6', 'C6', '-8.6130', '41.1500'),
-(1, 1,'Candeeiro 7', 'C7', '-8.4292', '40.2056'),
-(1, 1,'Candeeiro 8', 'C8', '-8.4300', '40.2058'),
-(1, 1,'Candeeiro 9', 'C9', '-8.4310', '40.2060'),
-(1, 2,'Candeeiro 10', 'C10', '-9.1420', '38.7230'),
-(1, 2,'Candeeiro 11', 'C11', '-9.1430', '38.7235'),
-(1, 2,'Candeeiro 12', 'C12', '-9.1440', '38.7240'),
-(1, 2,'Candeeiro 13', 'C13', '-8.6140', '41.1502'),
-(1, 2,'Candeeiro 14', 'C14', '-8.6150', '41.1504'),
-(1, 2,'Candeeiro 15', 'C15', '-8.6160', '41.1506'),
-(1, 2,'Candeeiro 16', 'C16', '-8.4320', '40.2062'),
-(1, 2,'Candeeiro 17', 'C17', '-8.4330', '40.2064'),
-(1, 2,'Candeeiro 18', 'C18', '-8.4340', '40.2066'),
-(1, 3,'Candeeiro 19', 'C19', '-9.1450', '38.7245'),
-(1, 3,'Candeeiro 20', 'C20', '-9.1460', '38.7250'),
-(1, 3,'Candeeiro 21', 'C21', '-9.1470', '38.7255'),
-(1, 3,'Candeeiro 22', 'C22', '-8.6170', '41.1508'),
-(1, 3,'Candeeiro 23', 'C23', '-8.6180', '41.1510'),
-(1, 3,'Candeeiro 24', 'C24', '-8.6190', '41.1512'),
-(1, 3,'Candeeiro 25', 'C25', '-8.4350', '40.2068'),
-(1, 3,'Candeeiro 26', 'C26', '-8.4360', '40.2070'),
-(1, 3,'Candeeiro 27', 'C27', '-8.4370', '40.2072');
+INSERT INTO estados (nome, cor) VALUES
+('Operacional', 'Verde'),
+('Avariado', 'Vermelho'),
+('Em Manutenção', 'Amarelo');
+
+INSERT INTO candeeiro_urbanos (id_cidade, id_estado, identificacao, longitude, latitude) VALUES
+(1, 1,'Candeeiro 1', '-9.1393', '38.7223'),
+(1, 1,'Candeeiro 2', '-9.1400', '38.7225'),
+(1, 1,'Candeeiro 3', '-9.1410', '38.7227'),
+(1, 1,'Candeeiro 4', '-8.6110', '41.1496'),
+(1, 1,'Candeeiro 5', '-8.6120', '41.1498'),
+(1, 1,'Candeeiro 6', '-8.6130', '41.1500'),
+(1, 1,'Candeeiro 7', '-8.4292', '40.2056'),
+(1, 1,'Candeeiro 8', '-8.4300', '40.2058'),
+(1, 1,'Candeeiro 9', '-8.4310', '40.2060'),
+(1, 2,'Candeeiro 10', '-9.1420', '38.7230'),
+(1, 2,'Candeeiro 11', '-9.1430', '38.7235'),
+(1, 2,'Candeeiro 12', '-9.1440', '38.7240'),
+(1, 2,'Candeeiro 13', '-8.6140', '41.1502'),
+(1, 2,'Candeeiro 14', '-8.6150', '41.1504'),
+(1, 2,'Candeeiro 15', '-8.6160', '41.1506'),
+(1, 2,'Candeeiro 16', '-8.4320', '40.2062'),
+(1, 2,'Candeeiro 17', '-8.4330', '40.2064'),
+(1, 2,'Candeeiro 18', '-8.4340', '40.2066'),
+(1, 3,'Candeeiro 19', '-9.1450', '38.7245'),
+(1, 3,'Candeeiro 20', '-9.1460', '38.7250'),
+(1, 3,'Candeeiro 21', '-9.1470', '38.7255'),
+(1, 3,'Candeeiro 22', '-8.6170', '41.1508'),
+(1, 3,'Candeeiro 23', '-8.6180', '41.1510'),
+(1, 3,'Candeeiro 24', '-8.6190', '41.1512'),
+(1, 3,'Candeeiro 25', '-8.4350', '40.2068'),
+(1, 3,'Candeeiro 26', '-8.4360', '40.2070'),
+(1, 3,'Candeeiro 27', '-8.4370', '40.2072'),
+(1, 3,'Candeeiro 28', '-8.4380', '40.2074'),
+(1, 3,'Candeeiro 29', '-8.4390', '40.2076'),
+(1, 3,'Candeeiro 30', '-8.4400', '40.2078');
 
 INSERT INTO contentores (id_cidade, id_estado, capacidade_max, longitude, latitude, tipo, identificacao, observacoes, is_full) VALUES
 (1, 1, 100.00, '-9.1393', '38.7223', 'Ecoponto Azul', 'Contentor 1', 'Sem observações', 0),
@@ -86,11 +94,6 @@ INSERT INTO contentores (id_cidade, id_estado, capacidade_max, longitude, latitu
 (1, 3, 110.00, '-9.1450', '38.7245', 'Ecoponto Azul', 'Contentor 7', 'Sem observações', 0),
 (1, 3, 85.00, '-8.6170', '41.1508', 'Ecoponto Verde', 'Contentor 8', 'Sem observações', 0),
 (1, 3, 65.00, '-8.4350', '40.2068', 'Ecoponto Amarelo', 'Contentor 9', 'Sem observações', 0);
-
-INSERT INTO estados (estado) VALUES
-('Operacional'),
-('Avariado'),
-('Em Manutenção');
 
 INSERT INTO contentor_leituras (id_contentor, peso, data_leitura) VALUES
 (1, 50.00, '2024-01-01 08:00:00'),
