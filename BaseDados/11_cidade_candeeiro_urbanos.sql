@@ -14,7 +14,7 @@ CREATE TABLE candeeiro_urbanos (
     CONSTRAINT unique_long_lat UNIQUE (longitude, latitude),
     FOREIGN KEY (id_cidade) REFERENCES cidades(id)
     ON DELETE RESTRICT
-    ON UPDATE CASCADE
+    ON UPDATE CASCADE,
     FOREIGN KEY (id_estado) REFERENCES estados(id)
     ON DELETE RESTRICT
     ON UPDATE CASCADE

@@ -16,7 +16,7 @@ CREATE TABLE contentores (
     PRIMARY KEY (id),
     FOREIGN KEY (id_cidade) REFERENCES cidades(id)
     ON DELETE RESTRICT
-    ON UPDATE CASCADE
+    ON UPDATE CASCADE,
     FOREIGN KEY (id_estado) REFERENCES estados(id)
     ON DELETE RESTRICT
     ON UPDATE CASCADE
