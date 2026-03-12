@@ -7,7 +7,7 @@ CREATE TABLE p_estacionamentos_clientes (
     id_p_estacionamento INT(11) UNSIGNED NOT NULL,
     id_cliente INT(11) UNSIGNED NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (id_p_estacionamento) REFERENCES p_estacionamento(id)
+    FOREIGN KEY (id_p_estacionamento) REFERENCES p_estacionamentos(id)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
     FOREIGN KEY (id_cliente) REFERENCES clientes(id)

@@ -10,7 +10,7 @@ CREATE TABLE lugares (
     identificacao VARCHAR(2) NOT NULL,
     ocupado BOOLEAN NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (id_tipo) REFERENCES lugar_tipos(id)
+    FOREIGN KEY (id_tipo) REFERENCES tipo_lugares(id)
     ON DELETE RESTRICT
     ON UPDATE CASCADE,
     FOREIGN KEY (id_p_estacionamentos) REFERENCES p_estacionamentos(id)

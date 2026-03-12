@@ -7,22 +7,15 @@ VALUES
 INSERT INTO veiculos (id_cliente, tipo, matricula, modelo, marca, cor, is_electric) VALUES
 (1, 'Carro', '12-AB-34', 'Clio', 'Renault', 'Branco', 0),
 (2, 'Carro', '23-CD-45', 'Model 3', 'Tesla', 'Preto', 1),
-(3, 'Moto', '34-EF-56', 'CB500', 'Honda', 'Vermelho', 0),
-(4, 'Carro', '45-GH-67', 'Golf', 'Volkswagen', 'Cinza', 0),
-(5, 'Carro', '56-IJ-78', 'Leaf', 'Nissan', 'Azul', 1),
-(6, 'Carro', '67-KL-89', '208', 'Peugeot', 'Branco', 0),
-(7, 'Moto', '78-MN-90', 'MT-07', 'Yamaha', 'Preto', 0),
-(8, 'Carro', '89-OP-12', 'Corolla', 'Toyota', 'Prata', 0),
-(9, 'Carro', '90-QR-23', 'Mustang Mach-E', 'Ford', 'Vermelho', 1),
-(10, 'Carro', '11-ST-45', 'Serie 3', 'BMW', 'Azul', 0);
+(3, 'Moto', '34-EF-56', 'CB500', 'Honda', 'Vermelho', 0);
 
 INSERT INTO cidades (nome) VALUES
 ('Loures');
 
 INSERT INTO p_estacionamentos (id_cidade, nome, num_max_lugares, longitude, latitude) VALUES
 (1, 'Parque Centro', 100, '-9.1393', '38.7223'),
-(2, 'Parque Ribeira', 80, '-8.6110', '41.1496'),
-(3, 'Parque Avenida', 60, '-8.4292', '40.2056');
+(1, 'Parque Ribeira', 80, '-8.6110', '41.1496'),
+(1, 'Parque Avenida', 60, '-8.4292', '40.2056');
 
 INSERT INTO p_estacionamentos_clientes (id_p_estacionamento, id_cliente) VALUES
 (1, 1),
