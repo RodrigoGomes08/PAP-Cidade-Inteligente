@@ -7,6 +7,8 @@ CREATE TABLE clientes (
     data_nascimento DATE,
     telefone VARCHAR(9),
     email VARCHAR(200) NOT NULL,
-    pass VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    morada VARCHAR(255) NOT NULL,
+    tem_mobilidade_reduzida TINYINT,
     PRIMARY KEY (id)
 );

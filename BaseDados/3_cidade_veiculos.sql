@@ -10,5 +10,7 @@ CREATE TABLE veiculos (
     modelo VARCHAR(200) NOT NULL,
     marca VARCHAR(200) NOT NULL,
     cor VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id)
+    is_electric TINYINT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id)
 );
