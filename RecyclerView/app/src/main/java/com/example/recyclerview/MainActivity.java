@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recyclerview.models.SuperHero;
@@ -33,16 +34,21 @@ public class MainActivity extends AppCompatActivity {
         this.buildSuperHeroes();
 
         this.recyclerView = findViewById(R.id.recyclerView);
+
+        HeroAdapter heroAdapter = new HeroAdapter(this.lista);
+
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        this.recyclerView.setAdapter(heroAdapter);
     }
 
     private void buildSuperHeroes(){
         Toast.makeText(this, "Build", Toast.LENGTH_SHORT).show();
 
-        SuperHero sp1 = new SuperHero("Mário1", 1);
-        SuperHero sp2 = new SuperHero("Mário2", 1);
-        SuperHero sp3 = new SuperHero("Mário3", 1);
-        SuperHero sp4 = new SuperHero("Mário4", 1);
-        SuperHero sp5 = new SuperHero("Mário5", 1);
+        SuperHero sp1 = new SuperHero("Mário1", R.drawable.ironman);
+        SuperHero sp2 = new SuperHero("Mário2", R.drawable.ironman);
+        SuperHero sp3 = new SuperHero("Mário3", R.drawable.ironman);
+        SuperHero sp4 = new SuperHero("Mário4", R.drawable.ironman);
+        SuperHero sp5 = new SuperHero("Mário5", R.drawable.ironman);
 
         this.lista = new ArrayList<>();
 

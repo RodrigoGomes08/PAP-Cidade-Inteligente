@@ -6,7 +6,7 @@ public class SuperHero {
     private String mascara;
     private int imageId;
 
-    public SuperHero(String nome, int imagem) {
+    public SuperHero(String nome, int imageId) {
         this.nome = nome;
         this.imageId = imageId;
 
