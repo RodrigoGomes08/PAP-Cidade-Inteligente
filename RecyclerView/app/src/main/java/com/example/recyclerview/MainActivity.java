@@ -1,12 +1,15 @@
 package com.example.recyclerview;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.recyclerview.models.SuperHero;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        SuperHero sp1 = new SuperHero("Mário", 1);
+
+        Toast.makeText(this, sp1.toString(), Toast.LENGTH_SHORT).show();
     }
 }
