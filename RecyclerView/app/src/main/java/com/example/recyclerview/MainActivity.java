@@ -11,7 +11,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.recyclerview.models.SuperHero;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ArrayList<SuperHero> lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +28,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        SuperHero sp1 = new SuperHero("Mário", 1);
+        this.buildSuperHeroes();
+    }
 
-        Toast.makeText(this, sp1.toString(), Toast.LENGTH_SHORT).show();
+    private void buildSuperHeroes(){
+        Toast.makeText(this, "Build", Toast.LENGTH_SHORT).show();
+
+        SuperHero sp1 = new SuperHero("Mário1", 1);
+        SuperHero sp2 = new SuperHero("Mário2", 1);
+        SuperHero sp3 = new SuperHero("Mário3", 1);
+        SuperHero sp4 = new SuperHero("Mário4", 1);
+        SuperHero sp5 = new SuperHero("Mário5", 1);
+
+        this.lista = new ArrayList<>();
+
+        this.lista.add(sp1);
+        this.lista.add(sp2);
+        this.lista.add(sp3);
+        this.lista.add(sp4);
+        this.lista.add(sp5);
     }
 }
