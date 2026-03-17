@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +42,9 @@ public class HeroAdapter extends RecyclerView.Adapter<HeroAdapter.ViewHolder> {
         holder.txtNome.setText(hero.getNome());
         holder.imgHero.setImageResource(hero.getImageId());
 
+        holder.itemView.setOnClickListener(v -> {
+                Toast.makeText(v.getContext(), hero.toString(), Toast.LENGTH_SHORT).show();
+    });
     }
 
     @Override
