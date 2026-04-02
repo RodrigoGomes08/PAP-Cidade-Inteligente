@@ -1,8 +1,8 @@
 INSERT INTO clientes (nome, data_nascimento, telefone, email, password, morada, tem_mobilidade_reduzida)
 VALUES 
-('João Silva', '1990-05-12', '912345678', 'joao.silva@email.com', 'pass123', 'Rua das Flores 15, Lisboa', 0),
-('Maria Fernandes', '1985-09-23', '934567890', 'maria.fernandes@email.com', 'maria456', 'Av. da Liberdade 120, Lisboa', 1),
-('Pedro Costa', '2000-01-30', '965432187', 'pedro.costa@email.com', 'pedro789', 'Rua do Sol 8, Porto', 0);
+('João Silva', '1990-05-12', '912345678', 'joao.silva@email.com', 'pass123', 'Rua das Flores 15, Lisboa', 1, 0),
+('Maria Fernandes', '1985-09-23', '934567890', 'maria.fernandes@email.com', 'maria456', 'Av. da Liberdade 120, Lisboa', 1, 1),
+('Pedro Costa', '2000-01-30', '965432187', 'pedro.costa@email.com', 'pedro789', 'Rua do Sol 8, Porto', 0, 0);
 
 INSERT INTO veiculos (id_cliente, tipo, matricula, modelo, marca, cor, is_electric) VALUES
 (1, 'Carro', '12-AB-34', 'Clio', 'Renault', 'Branco', 0),

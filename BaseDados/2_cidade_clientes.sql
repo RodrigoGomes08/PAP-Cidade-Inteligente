@@ -9,6 +9,7 @@ CREATE TABLE clientes (
     email VARCHAR(200) NOT NULL,
     password VARCHAR(50) NOT NULL,
     morada VARCHAR(255) NOT NULL,
+    ativo TINYINT DEFAULT 1,
     tem_mobilidade_reduzida TINYINT,
     PRIMARY KEY (id)
 );
